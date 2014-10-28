@@ -8,7 +8,7 @@ public class GUI_button : MonoBehaviour
 	public Transform enemyPosition;
 
 	public GameObject friend;
-	public Texture box;
+	//public Texture box;
 	public Transform friendPosition;
 
 	private void OnGUI (){
