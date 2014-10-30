@@ -54,9 +54,9 @@ public class SpellController : MonoBehaviour {
 	
 	void Explode() {
 		Instantiate (explosion, transform.position, Quaternion.identity);
-		target.GetComponent<CharController> ().cantMove = true;
-		target.GetComponent<CharController> ().shouldIFly = true;
-		target.GetComponent<CharController> ().originalPos = new Vector3 (target.transform.localPosition.x , target.transform.localPosition.y, target.transform.localPosition.z);
+		//target.GetComponent<CharController> ().cantMove = true;
+	//	target.GetComponent<CharController> ().shouldIFly = true;
+	//	target.GetComponent<CharController> ().originalPos = new Vector3 (target.transform.localPosition.x , target.transform.localPosition.y, target.transform.localPosition.z);
 		target.GetComponent<CharController> ().Hitpoints -= Damage;
 		Destroy (gameObject);
 	}
