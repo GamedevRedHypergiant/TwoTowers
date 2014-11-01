@@ -46,11 +46,11 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\GoldGUI.cs" />
      <Compile Include="Assets\Scripts\CampfireScript\SwitchView.cs" />
      <Compile Include="Assets\Scripts\CastleController.cs" />
      <Compile Include="Assets\Scripts\CharController.cs" />
      <Compile Include="Assets\Scripts\GUI script\GUI_button.cs" />
+     <Compile Include="Assets\Scripts\GoldGUI.cs" />
      <Compile Include="Assets\Scripts\HealthBarDisplay.cs" />
      <Compile Include="Assets\Scripts\Plugins\AstarPathfindingProject\Core\AI\AIPath.cs" />
      <Compile Include="Assets\Scripts\Plugins\AstarPathfindingProject\Core\AI\NavmeshController.cs" />
