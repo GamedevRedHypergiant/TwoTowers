@@ -63,6 +63,7 @@
      <Compile Include="Assets\WorldBuilder\Editor\World.cs" />
      <Compile Include="Assets\WorldBuilder\Editor\WorldGen.cs" />
      <None Include="Assets\Models\Warrior 2 Swords\sources\Toon Shading\Toony-Basic.shader" />
+     <None Include="Assets\Models\TinyArcher\Documents\Readme.txt" />
  <Reference Include="Assembly-UnityScript-firstpass">
  <HintPath>C:/Users/Julius/Documents/GameGit/TwoTowers/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
  </Reference>

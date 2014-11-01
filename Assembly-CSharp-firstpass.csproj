@@ -49,6 +49,7 @@
      <Compile Include="Assets\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" />
      <Compile Include="Assets\Standard Assets\Water (Basic)\Sources\Scripts\WaterSimple.cs" />
      <None Include="Assets\Models\Warrior 2 Swords\sources\Toon Shading\Toony-Basic.shader" />
+     <None Include="Assets\Models\TinyArcher\Documents\Readme.txt" />
  <Reference Include="Pathfinding.Ionic.Zip.Reduced">
  <HintPath>C:/Users/Julius/Documents/GameGit/TwoTowers/Assets/Scripts/Plugins/AstarPathfindingProject/Plugins/DotNetZip/Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
  </Reference>
