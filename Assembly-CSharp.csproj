@@ -49,6 +49,7 @@
      <Compile Include="Assets\Scripts\CampfireScript\SwitchView.cs" />
      <Compile Include="Assets\Scripts\CastleController.cs" />
      <Compile Include="Assets\Scripts\CharController.cs" />
+     <Compile Include="Assets\Scripts\GUI script\CastleHealthBar.cs" />
      <Compile Include="Assets\Scripts\GUI script\GUI_button.cs" />
      <Compile Include="Assets\Scripts\GUI script\GoldGUI.cs" />
      <Compile Include="Assets\Scripts\HealthBarDisplay.cs" />
@@ -143,7 +144,19 @@
      <Compile Include="Assets\WorldBuilder\Scripts\TerrainGeneration.cs" />
      <Compile Include="Assets\WorldBuilder\Scripts\TerrainTexturing.cs" />
      <None Include="Assets\Models\Warrior 2 Swords\sources\Toon Shading\Toony-Basic.shader" />
+     <None Include="Assets\AstarPathfindingProject\Editor\EditorAssets\Materials\Navmesh2.shader" />
+     <None Include="Assets\AstarPathfindingProject\Plugins\DotNetZip\License.txt" />
+     <None Include="Assets\AstarPathfindingProject\ExampleScenes\Materials\Projector Multiply.shader" />
+     <None Include="Assets\AstarPathfindingProject\ExampleScenes\Materials\DiffuseAlwaysVisible.shader" />
+     <None Include="Assets\AstarPathfindingProject\Plugins\dependencies.txt" />
+     <None Include="Assets\AstarPathfindingProject\ExampleScenes\_Example Scenes.txt" />
+     <None Include="Assets\AstarPathfindingProject\Readme_upgrading.txt" />
+     <None Include="Assets\AstarPathfindingProject\ExampleScenes\Materials\Projector Light.shader" />
+     <None Include="Assets\AstarPathfindingProject\Readme.txt" />
+     <None Include="Assets\AstarPathfindingProject\Plugins\JsonFx\License.txt" />
      <None Include="Assets\Models\TinyArcher\Documents\Readme.txt" />
+     <None Include="Assets\AstarPathfindingProject\Plugins\JsonFx\Readme.txt" />
+     <None Include="Assets\AstarPathfindingProject\link.xml" />
  <Reference Include="Pathfinding.Ionic.Zip.Reduced">
  <HintPath>C:/Users/Julius/Documents/GameGit/TwoTowers/Assets/Scripts/Plugins/AstarPathfindingProject/Plugins/DotNetZip/Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
  </Reference>

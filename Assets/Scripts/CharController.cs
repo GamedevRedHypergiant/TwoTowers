@@ -48,6 +48,11 @@ public class CharController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		targets = new List<CharController> ();
+		if (gameObject.tag == "GoodGuy") {
+			EnemyCastle = GameObject.FindGameObjectWithTag ("BadCastle").transform;
+		} else if (gameObject.tag == "Enemy") {
+			EnemyCastle = GameObject.FindGameObjectWithTag ("GoodCastle").transform;
+		}
 		seeker = GetComponent<Seeker> ();
 		seeker.StartPath (transform.position, EnemyCastle.position, OnPathComplete);
 		if (gameObject.tag == "GoodGuy") {
