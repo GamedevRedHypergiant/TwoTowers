@@ -35,6 +35,7 @@ public class CharController : MonoBehaviour {
 	public float ChanceToBlock = 5f;
 	public float AttackSpeed = 0.7f;
 	public float Damage = 5f;
+	public float price = 10f;
 
 	public Transform goldStorage;
 

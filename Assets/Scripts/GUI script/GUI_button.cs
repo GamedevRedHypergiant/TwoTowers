@@ -17,12 +17,19 @@ public class GUI_button : MonoBehaviour
 
 		//GUI.Box(new Rect(Screen.width -120, 0, Screen.width, Screen.height), new GUIContent(box));
 
-		if (GUI.Button (new Rect (50, 50, 100, 60), "Send Enemy")) {
-			Instantiate(enemy, enemyPosition.position, enemyPosition.rotation);	
-		}
-		 if (GUI.Button (new Rect (Screen.width - 150, Screen.height - 120, 100, 60), "Send Friend")) {
-			Instantiate(friend, friendPosition.position, friendPosition.rotation);	
-		}
+//		if (GUI.Button (new Rect (50, 50, 100, 60), "Send Enemy")) {
+//			Instantiate(enemy, enemyPosition.position, enemyPosition.rotation);	
+//		}
+		if (GameObject.FindGameObjectWithTag ("GoodCastle").GetComponent<CastleController> ().gold >= 10) {
+						GUI.backgroundColor = Color.green;
+						if (GUI.Button (new Rect (Screen.width - 150, Screen.height - 120, 100, 30), "Send Warrior")) {
+								Instantiate (friend, friendPosition.position, friendPosition.rotation);	
+								GameObject.FindGameObjectWithTag ("GoodCastle").GetComponent<CastleController> ().gold -= friend.GetComponent<CharController> ().price;
+						}
+				} else {
+						GUI.backgroundColor = Color.red;
+						GUI.Button (new Rect (Screen.width - 150, Screen.height - 120, 100, 30), "Send Warrior");
+				}
 
 	}
 }

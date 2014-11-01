@@ -14,6 +14,10 @@ public class CastleController : MonoBehaviour {
 
 	float nextFireTime;
 
+	float nextGoldGenerateTime;
+	float waitTimeToGenerate = 5f;
+	float goldGiven = 5f;
+
 	Vector3 aimPoint;
 
 	Quaternion desiredRotation;
@@ -26,13 +30,14 @@ public class CastleController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+		nextGoldGenerateTime = Time.time + waitTimeToGenerate;
 	}
 
 
 	
 	// Update is called once per frame
 	void Update () {
+		generateGold ();
 		if (target) {				
 				CalculateAimPosition(target.position, spawner);
 			spawn[spawner].rotation = Quaternion.Lerp(spawn[spawner].rotation, desiredRotation, Time.deltaTime * turnSpeed);
@@ -84,4 +89,11 @@ public class CastleController : MonoBehaviour {
 		beh.target = target;
 		
 	}
+
+	void generateGold() {
+				if (nextGoldGenerateTime <= Time.time) {
+						nextGoldGenerateTime = Time.time + waitTimeToGenerate;
+						gold += goldGiven;
+				}
+		}
 }
