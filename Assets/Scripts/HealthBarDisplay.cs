@@ -11,7 +11,7 @@ public class HealthBarDisplay : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		healthBarLength = 80;
-		maxHealth = gameObject.transform.parent.transform.GetComponent<CharController> ().Hitpoints;;
+		maxHealth = gameObject.transform.parent.transform.GetComponent<CharController> ().Hitpoints;
 
 	}
 	

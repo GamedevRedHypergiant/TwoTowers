@@ -53,6 +53,7 @@
      <Compile Include="Assets\Scripts\GUI script\CastleHealthBar.cs" />
      <Compile Include="Assets\Scripts\GUI script\GUI_button.cs" />
      <Compile Include="Assets\Scripts\GUI script\GoldGUI.cs" />
+     <Compile Include="Assets\Scripts\GameEnding.cs" />
      <Compile Include="Assets\Scripts\HealthBarDisplay.cs" />
      <Compile Include="Assets\Scripts\ObjectDump.cs" />
      <Compile Include="Assets\Scripts\Plugins\AstarPathfindingProject\Core\AI\AIPath.cs" />

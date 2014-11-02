@@ -37,6 +37,9 @@ public class CastleController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if (Hitpoints < 0) {
+			Hitpoints = 0;
+		}
 		generateGold ();
 		if (target) {				
 				CalculateAimPosition(target.position, spawner);
