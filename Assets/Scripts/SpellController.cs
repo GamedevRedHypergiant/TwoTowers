@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 
 
@@ -12,6 +13,7 @@ public class SpellController : MonoBehaviour {
 	public float waitToExplode;
 	public float explodeTime;
 	public float Damage;
+	List<Transform> targets = new List<Transform> ();
 	
 	private float distance;
 	
@@ -43,6 +45,7 @@ public class SpellController : MonoBehaviour {
 	void OnTriggerEnter(Collider o) {
 		if (((gameObject.tag == "GoodSpell") && (o.gameObject.tag == "Enemy")) || ((gameObject.tag == "BadSpell") && (o.gameObject.tag == "GoodGuy"))) {
 			explodeTime = Time.time + waitToExplode;
+			targets.Add(o.transform);
 		}
 	}
 	
@@ -54,10 +57,14 @@ public class SpellController : MonoBehaviour {
 	
 	void Explode() {
 		Instantiate (explosion, transform.position, Quaternion.identity);
-		target.GetComponent<CharController> ().cantMove = true;
-		target.GetComponent<CharController> ().shouldIFly = true;
-		target.GetComponent<CharController> ().originalPos = new Vector3 (target.transform.localPosition.x , target.transform.localPosition.y, target.transform.localPosition.z);
-		target.GetComponent<CharController> ().Hitpoints -= Damage;
+		for (int i = 0; i < targets.Count; i++) {
+						if (targets [i] != null) {
+								targets [i].GetComponent<CharController> ().cantMove = true;
+								targets [i].GetComponent<CharController> ().shouldIFly = true;
+								targets [i].GetComponent<CharController> ().originalPos = new Vector3 (targets [i].transform.localPosition.x, targets [i].transform.localPosition.y, targets [i].transform.localPosition.z);
+								targets [i].GetComponent<CharController> ().Hitpoints -= Damage;
+						}
+				}
 		Destroy (gameObject);
 	}
 }

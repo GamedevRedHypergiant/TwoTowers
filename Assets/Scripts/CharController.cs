@@ -24,6 +24,8 @@ public class CharController : MonoBehaviour {
 	bool taskDone = false;
 	public bool cantMove = false;
 	public bool shouldIFly = false;
+	public bool attacksFromRange;
+	public Transform projectile;
 
 	CharacterController characterController;
 
@@ -76,10 +78,16 @@ public class CharController : MonoBehaviour {
 		if (((gameObject.tag == "GoodGuy") && (o.tag == "Enemy")) || ((gameObject.tag == "Enemy") && (o.tag == "GoodGuy"))) {
 			targets.Add(o.GetComponent<CharController>());
 			hasTarget = true;
+			if (attacksFromRange) {
+				targetReached = true;
+			}
 			countOfTargets++;
 		} else if (((gameObject.tag == "GoodGuy") && (o.tag == "BadCastle")) || ((gameObject.tag == "Enemy") && (o.tag == "GoodCastle"))) {
 			enemyCastle = o.GetComponent<CastleController>();
 			hasTargetCastle = true;
+			if (attacksFromRange) {
+				targetReached = true;
+			}
 		}
 	}
 
@@ -152,6 +160,7 @@ public class CharController : MonoBehaviour {
 						isBlocked = true;
 				}
 
+
 				if (targets [0].Hitpoints <= 0) {
 						targets.Remove (targets [0]);
 						countOfTargets--;
@@ -160,7 +169,15 @@ public class CharController : MonoBehaviour {
 								targetReached = false;
 						}
 				} else if (!isBlocked) {
+			
+						if (Vector3.Distance (transform.position, targets [0].transform.position) <= 10f) {
+							targetReached = false;
+						}
+
 						targets [0].Hitpoints -= Damage;
+							if (projectile != null) {
+								Instantiate(projectile, targets[0].transform.position, targets[0].transform.rotation);
+							}
 				} 
 
 

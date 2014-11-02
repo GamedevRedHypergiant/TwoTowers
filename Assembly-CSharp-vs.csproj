@@ -54,6 +54,7 @@
      <Compile Include="Assets\Scripts\GUI script\GUI_button.cs" />
      <Compile Include="Assets\Scripts\GUI script\GoldGUI.cs" />
      <Compile Include="Assets\Scripts\HealthBarDisplay.cs" />
+     <Compile Include="Assets\Scripts\ObjectDump.cs" />
      <Compile Include="Assets\Scripts\Plugins\AstarPathfindingProject\Core\AI\AIPath.cs" />
      <Compile Include="Assets\Scripts\Plugins\AstarPathfindingProject\Core\AI\NavmeshController.cs" />
      <Compile Include="Assets\Scripts\Plugins\AstarPathfindingProject\Core\AI\Seeker.cs" />
@@ -147,6 +148,7 @@
      <None Include="Assets\Models\Warrior 2 Swords\sources\Toon Shading\Toony-Basic.shader" />
      <None Include="Assets\AstarPathfindingProject\Editor\EditorAssets\Materials\Navmesh2.shader" />
      <None Include="Assets\AstarPathfindingProject\Plugins\DotNetZip\License.txt" />
+     <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
      <None Include="Assets\AstarPathfindingProject\ExampleScenes\Materials\Projector Multiply.shader" />
      <None Include="Assets\AstarPathfindingProject\ExampleScenes\Materials\DiffuseAlwaysVisible.shader" />
      <None Include="Assets\AstarPathfindingProject\Plugins\dependencies.txt" />
@@ -154,6 +156,7 @@
      <None Include="Assets\AstarPathfindingProject\Readme_upgrading.txt" />
      <None Include="Assets\AstarPathfindingProject\ExampleScenes\Materials\Projector Light.shader" />
      <None Include="Assets\AstarPathfindingProject\Readme.txt" />
+     <None Include="Assets\Models\Skeletons\SkeletonData\animations.txt" />
      <None Include="Assets\AstarPathfindingProject\Plugins\JsonFx\License.txt" />
      <None Include="Assets\Models\TinyArcher\Documents\Readme.txt" />
      <None Include="Assets\AstarPathfindingProject\Plugins\JsonFx\Readme.txt" />
