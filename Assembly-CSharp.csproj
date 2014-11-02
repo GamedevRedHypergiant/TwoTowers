@@ -49,6 +49,7 @@
      <Compile Include="Assets\Scripts\CampfireScript\SwitchView.cs" />
      <Compile Include="Assets\Scripts\CastleController.cs" />
      <Compile Include="Assets\Scripts\CharController.cs" />
+     <Compile Include="Assets\Scripts\EnemyCastleAI.cs" />
      <Compile Include="Assets\Scripts\GUI script\CastleHealthBar.cs" />
      <Compile Include="Assets\Scripts\GUI script\GUI_button.cs" />
      <Compile Include="Assets\Scripts\GUI script\GoldGUI.cs" />

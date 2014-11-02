@@ -1,10 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\GUI script\GUI_button.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\SpellController.cs">
     <Files>
-      <File FileName="Assets\Scripts\GUI script\GUI_button.cs" Line="43" Column="5" />
-      <File FileName="Assets\Scripts\CharController.cs" Line="51" Column="37" />
-      <File FileName="Assets\Scripts\GUI script\CastleHealthBar.cs" Line="34" Column="20" />
+      <File FileName="Assets\Scripts\EnemyCastleAI.cs" Line="19" Column="2" />
+      <File FileName="Assets\Scripts\GUI script\GUI_button.cs" Line="31" Column="81" />
+      <File FileName="Assets\Scripts\SpellController.cs" Line="18" Column="32" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
