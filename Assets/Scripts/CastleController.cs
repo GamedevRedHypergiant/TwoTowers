@@ -3,6 +3,9 @@ using System.Collections;
 
 public class CastleController : MonoBehaviour {
 
+	public int max_warriors;
+	public int max_mages;
+
 	public float gold;
 	public float Hitpoints = 1000f;
 	public float reloadTime = 15f;

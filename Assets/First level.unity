@@ -5710,7 +5710,6 @@ MonoBehaviour:
   magic_button: {fileID: 11792623}
   warrior_object: {fileID: 100054, guid: 3bffb6cd980c1e443ba857c55b9b5bdb, type: 2}
   magic_object: {fileID: 100078, guid: 036c07c1ad95df646aa26cdc6c4291c2, type: 2}
-  player: {fileID: 1291135690}
 --- !u!1 &183820689
 GameObject:
   m_ObjectHideFlags: 0
@@ -7941,6 +7940,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b04ec92d3e44324a929e4273f25598b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  warriors: {fileID: 1615756925}
+  mages: {fileID: 1605109964}
+  max_warriors: {fileID: 1936079052}
+  max_mages: {fileID: 1779871350}
 --- !u!1001 &249359155
 Prefab:
   m_ObjectHideFlags: 0
@@ -8812,7 +8815,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c32102589a71364a9f30d8ae4739232, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gold: 0
+  max_warriors: 10
+  max_mages: 5
+  gold: 1000
   Hitpoints: 1000
   reloadTime: 5
   projectile: {fileID: 100004, guid: 61cf2b3210c7cdd49b0cb5e329e2832b, type: 2}
@@ -64190,6 +64195,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c32102589a71364a9f30d8ae4739232, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  max_warriors: 0
+  max_mages: 0
   gold: 0
   Hitpoints: 1000
   reloadTime: 5
