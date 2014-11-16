@@ -23,6 +23,12 @@ public class PlayerEntities : MonoBehaviour {
 		print ("Warrior!!!");
 	}
 
+	public void decWarriors()
+	{
+		--Warriors;
+		print ("Warrior!!!");
+	}
+
 	public int getWarriors()
 	{
 		return Warriors;
@@ -31,6 +37,12 @@ public class PlayerEntities : MonoBehaviour {
 	public void incMages()
 	{
 		++Mages;
+		print ("Mages!!!");
+	}
+
+	public void decMages()
+	{
+		--Mages;
 		print ("Mages!!!");
 	}
 	
