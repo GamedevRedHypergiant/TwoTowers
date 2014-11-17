@@ -3382,6 +3382,7 @@ GameObject:
   - 114: {fileID: 123422709}
   - 154: {fileID: 123422708}
   - 82: {fileID: 123422711}
+  - 114: {fileID: 123422712}
   m_Layer: 0
   m_Name: Terrain
   m_TagString: Untagged
@@ -3496,6 +3497,18 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+--- !u!114 &123422712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 123422707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e99db8f867d821d47a82b583903ad6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerGUI: {fileID: 767191226}
 --- !u!1 &124752018
 GameObject:
   m_ObjectHideFlags: 0
@@ -8725,6 +8738,7 @@ GameObject:
   - 114: {fileID: 265028427}
   - 65: {fileID: 265028429}
   - 54: {fileID: 265028428}
+  - 114: {fileID: 265028430}
   m_Layer: 0
   m_Name: Pilis Gera
   m_TagString: GoodCastle
@@ -8864,6 +8878,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: .0799999982, y: .219999999, z: .129999995}
   m_Center: {x: -7.49417013e-05, y: .0813401341, z: 2.98043261e-08}
+--- !u!114 &265028430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 265028422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 518f540fb4014a943967a49e11d31858, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerGUI: {fileID: 767191226}
 --- !u!1 &265035412
 GameObject:
   m_ObjectHideFlags: 0
