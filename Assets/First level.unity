@@ -5679,7 +5679,7 @@ Transform:
   - {fileID: 1039606464}
   - {fileID: 232372240}
   m_Father: {fileID: 767191227}
-  m_RootOrder: 5
+  m_RootOrder: 4
 --- !u!114 &182539370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7928,7 +7928,7 @@ Transform:
   - {fileID: 93992145}
   - {fileID: 48226983}
   m_Father: {fileID: 767191227}
-  m_RootOrder: 4
+  m_RootOrder: 3
 --- !u!114 &248154689
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14991,7 +14991,7 @@ MonoBehaviour:
   m_Direction: 0
   m_MinValue: 0
   m_MaxValue: 1
-  m_WholeNumbers: 0
+  m_WholeNumbers: 1
   m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
@@ -25129,7 +25129,6 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 259197359}
-  - {fileID: 1090453009}
   - {fileID: 920309792}
   - {fileID: 908787530}
   - {fileID: 248154688}
@@ -27982,7 +27981,7 @@ Transform:
   - {fileID: 252155684}
   - {fileID: 1675699198}
   m_Father: {fileID: 767191227}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!114 &908787531
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27994,6 +27993,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4200b888b06dc34993122219feb42c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  warrior_send_count_text: {fileID: 687106966}
+  mage_send_count_text: {fileID: 1657958593}
+  slider_warrior: {fileID: 1766043571}
+  slider_mage: {fileID: 466800896}
   warrior: {fileID: 100054, guid: 3bffb6cd980c1e443ba857c55b9b5bdb, type: 2}
   warrior_position: {fileID: 1135251003}
   mage: {fileID: 100078, guid: 036c07c1ad95df646aa26cdc6c4291c2, type: 2}
@@ -28428,7 +28431,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 767191227}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_AnchorMin: {x: 1, y: .5}
   m_AnchorMax: {x: 1, y: .5}
   m_AnchoredPosition: {x: -80.6999969, y: 0}
@@ -33639,97 +33642,6 @@ Animator:
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!1 &1090453007
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1090453009}
-  - 114: {fileID: 1090453008}
-  - 114: {fileID: 1090453010}
-  m_Layer: 0
-  m_Name: BUY menu
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1090453008
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1090453007}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9b02416ea05c254e9c6dc1795ff9222, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  warriorBuy:
-  - {fileID: 2800000, guid: 111172f1dc58f52439347681a794ff11, type: 3}
-  - {fileID: 2800000, guid: 9aa2a66d19a856e4aa01d537ea663d31, type: 3}
-  blank: {fileID: 2800000, guid: 29ce243570babbe41a2b3de8e266f5f9, type: 3}
-  friend: {fileID: 100054, guid: 3bffb6cd980c1e443ba857c55b9b5bdb, type: 2}
-  friendPosition: {fileID: 1135251003}
-  troopCooldown: 5
-  buttonPos:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 0
-    height: 0
-  cooldown:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 0
-    height: 0
-  shiftX: 0
---- !u!4 &1090453009
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1090453007}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -87.8124695, y: -357.719421, z: 799.99231}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 767191227}
-  m_RootOrder: 1
---- !u!114 &1090453010
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1090453007}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9b02416ea05c254e9c6dc1795ff9222, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  warriorBuy:
-  - {fileID: 2800000, guid: 4e0596072a43d4c47b6f663845a9a368, type: 3}
-  - {fileID: 2800000, guid: 2b0d841bae83d7c459ab68ad753fa2b1, type: 3}
-  blank: {fileID: 2800000, guid: 29ce243570babbe41a2b3de8e266f5f9, type: 3}
-  friend: {fileID: 100078, guid: 036c07c1ad95df646aa26cdc6c4291c2, type: 2}
-  friendPosition: {fileID: 1135251003}
-  troopCooldown: 15
-  buttonPos:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 0
-    height: 0
-  cooldown:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 0
-    height: 0
-  shiftX: 50
 --- !u!1001 &1090664428
 Prefab:
   m_ObjectHideFlags: 0
@@ -34637,7 +34549,7 @@ Transform:
   - {fileID: 1827420826}
   - {fileID: 1758186122}
   m_Father: {fileID: 767191227}
-  m_RootOrder: 6
+  m_RootOrder: 5
 --- !u!1001 &1120339334
 Prefab:
   m_ObjectHideFlags: 0
@@ -56030,11 +55942,23 @@ MonoBehaviour:
   m_Direction: 0
   m_MinValue: 0
   m_MaxValue: 1
-  m_WholeNumbers: 0
+  m_WholeNumbers: 1
   m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 908787531}
+        m_MethodName: sendWarriorCount
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1766043572

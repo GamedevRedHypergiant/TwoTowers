@@ -1,0 +1,105 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &100000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400000}
+  - 114: {fileID: 11400000}
+  - 114: {fileID: 11400002}
+  m_Layer: 0
+  m_Name: BUY menu
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &400000
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -87.8124695, y: -357.719421, z: 799.99231}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9b02416ea05c254e9c6dc1795ff9222, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  warriorBuy:
+  - {fileID: 2800000, guid: 111172f1dc58f52439347681a794ff11, type: 3}
+  - {fileID: 2800000, guid: 9aa2a66d19a856e4aa01d537ea663d31, type: 3}
+  blank: {fileID: 2800000, guid: 29ce243570babbe41a2b3de8e266f5f9, type: 3}
+  friend: {fileID: 100054, guid: 3bffb6cd980c1e443ba857c55b9b5bdb, type: 2}
+  friendPosition: {fileID: 0}
+  troopCooldown: 5
+  buttonPos:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  cooldown:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  shiftX: 0
+--- !u!114 &11400002
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9b02416ea05c254e9c6dc1795ff9222, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  warriorBuy:
+  - {fileID: 2800000, guid: 4e0596072a43d4c47b6f663845a9a368, type: 3}
+  - {fileID: 2800000, guid: 2b0d841bae83d7c459ab68ad753fa2b1, type: 3}
+  blank: {fileID: 2800000, guid: 29ce243570babbe41a2b3de8e266f5f9, type: 3}
+  friend: {fileID: 100078, guid: 036c07c1ad95df646aa26cdc6c4291c2, type: 2}
+  friendPosition: {fileID: 0}
+  troopCooldown: 15
+  buttonPos:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  cooldown:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  shiftX: 50
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 100000}
+  m_IsPrefabParent: 1
+  m_IsExploded: 1
