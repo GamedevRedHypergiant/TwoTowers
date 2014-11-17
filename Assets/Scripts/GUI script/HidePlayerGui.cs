@@ -5,7 +5,7 @@ public class HidePlayerGui : MonoBehaviour {
 
 	public GameObject playerGUI;
 
-	void OnMouseDown() {
+	public void onMouseDown() {
 		playerGUI.SetActive (false);
 	}
 }
