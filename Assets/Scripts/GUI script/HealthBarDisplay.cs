@@ -5,6 +5,7 @@ public class HealthBarDisplay : MonoBehaviour {
 
 	public float maxHealth;
 	public float curHealth;
+	public float scale_transform = 0.3f;
 	
 	public float healthBarLength;
 	
@@ -20,7 +21,7 @@ public class HealthBarDisplay : MonoBehaviour {
 		curHealth = gameObject.transform.parent.transform.GetComponent<CharController> ().Hitpoints;
 		transform.LookAt(transform.position + Camera.main.transform.rotation * Vector3.up,Camera.main.transform.rotation * Vector3.back);
 		Vector3 scale = transform.localScale;
-		scale.x = curHealth/maxHealth * 0.3f; // your new value
+		scale.x = curHealth/maxHealth * scale_transform; // your new value
 		transform.localScale = scale;
 	}
 

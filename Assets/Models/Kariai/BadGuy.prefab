@@ -1041,7 +1041,7 @@ Transform:
   m_GameObject: {fileID: 100060}
   m_LocalRotation: {x: 0, y: -.984741092, z: 0, w: -.174026191}
   m_LocalPosition: {x: 206.223495, y: 86.2631989, z: 690.479187}
-  m_LocalScale: {x: 7.12715149, y: 7.12715292, z: 7.12715292}
+  m_LocalScale: {x: 25, y: 25, z: 25}
   m_Children:
   - {fileID: 400002}
   - {fileID: 400068}
@@ -1280,7 +1280,7 @@ MonoBehaviour:
   shouldIFly: 0
   attacksFromRange: 0
   projectile: {fileID: 0}
-  Speed: 20
+  Speed: 35
   Hitpoints: 100
   ChanceToBlock: 5
   AttackSpeed: .5

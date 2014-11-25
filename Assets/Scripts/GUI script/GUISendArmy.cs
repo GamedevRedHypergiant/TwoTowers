@@ -6,15 +6,17 @@ public class GUISendArmy : MonoBehaviour {
 
 	public Text warrior_send_count_text;
 	public Text mage_send_count_text;
+	public Text troll_send_count_text;
 
 	public Slider slider_warrior;
 	public Slider slider_mage;
+	public Slider slider_troll;
 
 	public GameObject warrior;
-	public Transform warrior_position;
 	public GameObject mage;
-	public Transform mage_position;
+	public GameObject troll;
 
+	public Transform object_position;
 	// Use this for initialization
 	void Start () {
 	
@@ -24,8 +26,10 @@ public class GUISendArmy : MonoBehaviour {
 	void Update () {
 		warrior_send_count_text.text = slider_warrior.value.ToString ();
 		mage_send_count_text.text = slider_mage.value.ToString ();
+		troll_send_count_text.text = slider_troll.value.ToString ();
 		slider_mage.maxValue = GameObject.FindGameObjectWithTag ("Player").GetComponent<PlayerEntities> ().getMages();
 		slider_warrior.maxValue = GameObject.FindGameObjectWithTag ("Player").GetComponent<PlayerEntities> ().getWarriors();
+		slider_troll.maxValue = GameObject.FindGameObjectWithTag ("Player").GetComponent<PlayerEntities> ().getTrolls();
 	}
 
 	public void sendArmy ()
@@ -34,14 +38,21 @@ public class GUISendArmy : MonoBehaviour {
 		for (int i=0; i<j; ++i)
 		{
 			GameObject.FindGameObjectWithTag ("Player").GetComponent<PlayerEntities> ().decWarriors ();
-			Instantiate (warrior, warrior_position.position, warrior_position.rotation);
+			Instantiate (warrior, object_position.position, object_position.rotation);
 		}
 
 		j = (int) slider_mage.value;
 		for (int i=0; i<j; ++i)
 		{
 			GameObject.FindGameObjectWithTag ("Player").GetComponent<PlayerEntities> ().decMages ();
-			Instantiate (mage, mage_position.position, mage_position.rotation);
+			Instantiate (mage, object_position.position, object_position.rotation);
+		}
+
+		j = (int) slider_troll.value;
+		for (int i=0; i<j; ++i)
+		{
+			GameObject.FindGameObjectWithTag ("Player").GetComponent<PlayerEntities> ().decTrolls ();
+			Instantiate (troll, object_position.position, object_position.rotation);
 		}
 
 	}

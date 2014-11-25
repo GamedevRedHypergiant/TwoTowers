@@ -5,6 +5,7 @@ public class CastleController : MonoBehaviour {
 
 	public int max_warriors;
 	public int max_mages;
+	public int max_trolls;
 
 	public float gold;
 	public float Hitpoints = 1000f;

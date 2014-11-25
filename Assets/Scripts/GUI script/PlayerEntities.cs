@@ -5,11 +5,13 @@ public class PlayerEntities : MonoBehaviour {
 
 	private int Warriors;
 	private int Mages;
+	private int Trolls;
 	
 	// Use this for initialization
 	void Start () {
 		Warriors = 0;
 		Mages = 0;
+		Trolls = 0;
 	}
 	
 	// Update is called once per frame
@@ -20,13 +22,11 @@ public class PlayerEntities : MonoBehaviour {
 	public void incWarriors()
 	{
 		++Warriors;
-		print ("Warrior!!!");
 	}
 
 	public void decWarriors()
 	{
 		--Warriors;
-		print ("Warrior!!!");
 	}
 
 	public int getWarriors()
@@ -37,13 +37,11 @@ public class PlayerEntities : MonoBehaviour {
 	public void incMages()
 	{
 		++Mages;
-		print ("Mages!!!");
 	}
 
 	public void decMages()
 	{
 		--Mages;
-		print ("Mages!!!");
 	}
 	
 	public int getMages()
@@ -51,6 +49,20 @@ public class PlayerEntities : MonoBehaviour {
 		return Mages;
 	}
 
+	public void incTrolls()
+	{
+		++Trolls;
+	}
+	
+	public void decTrolls()
+	{
+		--Trolls;
+	}
+	
+	public int getTrolls()
+	{
+		return Trolls;
+	}
 
 
 }
