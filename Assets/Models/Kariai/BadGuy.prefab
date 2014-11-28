@@ -1261,6 +1261,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 0
   curHealth: 0
+  scale_transform: .300000012
   healthBarLength: 0
 --- !u!114 &11400002
 MonoBehaviour:
@@ -1273,20 +1274,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57cee21fba65933438639f9473f47be9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyCastle: {fileID: 0}
-  targets: []
-  enemyCastle: {fileID: 0}
+  type: 2
   cantMove: 0
   shouldIFly: 0
   attacksFromRange: 0
   projectile: {fileID: 0}
-  Speed: 35
+  damageToTroll: 100
+  damageToMage: 60
+  damageToWarrior: 35
+  damageToTower: 20
+  Speed: 40
   Hitpoints: 100
   ChanceToBlock: 5
-  AttackSpeed: .5
-  Damage: 5
-  price: 10
-  goldStorage: {fileID: 0}
+  AttackSpeed: 2
+  price: 20
   originalPos: {x: 0, y: 0, z: 0}
 --- !u!114 &11400004
 MonoBehaviour:

@@ -3797,20 +3797,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57cee21fba65933438639f9473f47be9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyCastle: {fileID: 0}
-  targets: []
-  enemyCastle: {fileID: 0}
+  type: 3
   cantMove: 0
   shouldIFly: 1
   attacksFromRange: 0
   projectile: {fileID: 0}
-  Speed: 60
-  Hitpoints: 300
+  damageToTroll: 85
+  damageToMage: 100
+  damageToWarrior: 50
+  damageToTower: 30
+  Speed: 20
+  Hitpoints: 1000
   ChanceToBlock: 5
   AttackSpeed: 3
-  Damage: 30
   price: 100
-  goldStorage: {fileID: 0}
   originalPos: {x: 0, y: 0, z: 0}
 --- !u!114 &11400004
 MonoBehaviour:
