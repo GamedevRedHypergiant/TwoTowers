@@ -17,11 +17,13 @@ public class SpawnSelector : MonoBehaviour {
 	}
 
 	void OnMouseOver() {
-		GameObject.FindGameObjectWithTag ("GoodSpawn").tag = "SpawnInactive";
-		this.transform.parent.tag = "GoodSpawn";
-		GameObject newCastle = GameObject.FindGameObjectWithTag ("BadCastleInactive");
-		GameObject.FindGameObjectWithTag ("BadCastle").tag = "BadCastleInactive";
-		newCastle.tag = "BadCastle";
+		if (this.transform.parent.tag != "GoodSpawn") {
+						GameObject.FindGameObjectWithTag ("GoodSpawn").tag = "SpawnInactive";
+						this.transform.parent.tag = "GoodSpawn";
+						GameObject newCastle = GameObject.FindGameObjectWithTag ("BadCastleInactive");
+						GameObject.FindGameObjectWithTag ("BadCastle").tag = "BadCastleInactive";
+						newCastle.tag = "BadCastle";
+				}
 	}
 
 
