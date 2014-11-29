@@ -3,7 +3,15 @@ using System.Collections;
 
 public class CastleController : MonoBehaviour {
 
-	public int max_warriors;
+	//upgradeTower
+    public int upgrade_warriors;
+    public int upgrade_mages;
+    public int upgrade_trolls;
+    public int upgrade_health;
+    public int upgrade_cost;
+
+    public int start_upgrade_cost = 100;
+    public int max_warriors;
 	public int max_mages;
 	public int max_trolls;
 
@@ -51,6 +59,7 @@ public class CastleController : MonoBehaviour {
 			if(Time.time >= nextFireTime)
 				FireProjectile();
 		}
+
 	}
 
 	void CalculateSpawner() {
@@ -103,4 +112,18 @@ public class CastleController : MonoBehaviour {
 						gold += goldGiven;
 				}
 		}
+
+    public void ugradeTower()
+    {
+        if (gold >= upgrade_cost)
+        {
+
+            gold -= upgrade_cost;
+            max_warriors += upgrade_warriors;
+            max_mages += upgrade_mages;
+            max_trolls += upgrade_trolls;
+            Hitpoints += upgrade_health;
+            start_upgrade_cost += upgrade_cost;
+        }
+    }
 }
