@@ -105,7 +105,7 @@ public class CharController : MonoBehaviour
             hasTarget = false;
         } 
 
-        if (((gameObject.tag == "GoodGuy") && (o.tag == "BadCastle")) || ((gameObject.tag == "Enemy") && (o.tag == "GoodCastle")))
+		if (((gameObject.tag == "GoodGuy") && (o.tag == "BadCastle")) || ((gameObject.tag == "GoodGuy") && (o.tag == "BadCastleInactive")) || ((gameObject.tag == "Enemy") && (o.tag == "GoodCastle")))
         {
             enemyCastleController = o.GetComponent<CastleController>();
             hasTargetCastle = false;
