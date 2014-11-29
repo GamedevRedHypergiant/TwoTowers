@@ -105,7 +105,7 @@ public class CharController : MonoBehaviour
             hasTarget = false;
         } 
 
-		if (((gameObject.tag == "GoodGuy") && (o.tag == "BadCastle")) || ((gameObject.tag == "GoodGuy") && (o.tag == "BadCastleInactive")) || ((gameObject.tag == "Enemy") && (o.tag == "GoodCastle")))
+        if (((gameObject.tag == "GoodGuy") && (o.tag == "BadCastle")) || ((gameObject.tag == "GoodGuy") && (o.tag == "BadCastleInactive")) || ((gameObject.tag == "Enemy") && (o.tag == "GoodCastle")))
         {
             enemyCastleController = o.GetComponent<CastleController>();
             hasTargetCastle = false;
@@ -177,62 +177,103 @@ public class CharController : MonoBehaviour
     {
         if (type == 3)
         {
-            nextAttackTime = Time.time + (AttackSpeed*2/3);
+            nextAttackTime = Time.time + (AttackSpeed * 2 / 3);
             SetTimeTroll = true;
         } else
         {
             nextAttackTime = Time.time + AttackSpeed;
         }
-
-        bool isBlocked = false;
-        if (Random.Range(0, 99) < Targets [0].ChanceToBlock)
+       
+        if (Targets.Count > 0 && Targets [0] != null)
         {
-            isBlocked = true;
-        }
-
-        if (!isBlocked)
-        {
+            bool isBlocked = false;
+            if (Random.Range(0, 99) < Targets [0].ChanceToBlock)
+            {
+                isBlocked = true;
+            }
             
-            if (Vector3.Distance(transform.position, Targets [0].transform.position) <= 10f)
+            if (!isBlocked)
             {
-                targetReached = false;
-            }
-                        
-            if (Targets [0].type == 1)
-            {
-                Targets [0].Hitpoints -= damageToMage;
-            } else if (Targets [0].type == 2)
-            {
-                Targets [0].Hitpoints -= damageToWarrior;
-            } else
-            {
-                Targets [0].Hitpoints -= damageToTroll;
-            }
 
-            if (projectile != null)
-            {
-                Instantiate(projectile, Targets [0].transform.position, Targets [0].transform.rotation);
-            }
-        }
 
-        if (Targets [0].Hitpoints <= 0)
+                if (type == 3)
+                {
+                    int i = 0;
+                    while (Targets.Count > i)
+                    {
+                        if (Vector3.Distance(transform.position, Targets [i].transform.position) <= 10f)
+                        {
+                            targetReached = false;
+                        }
+                             
+                        if (Targets [i].type == 1)
+                        {
+                            Targets [i].Hitpoints -= damageToMage;
+                        } else if (Targets [i].type == 2)
+                        {
+                            Targets [i].Hitpoints -= damageToWarrior;
+                        } else
+                        {
+                            Targets [i].Hitpoints -= damageToTroll;
+                        }
+                        ++i;
+                
+                    }
+                } else
+                {
+                    if (Vector3.Distance(transform.position, Targets [0].transform.position) <= 10f)
+                    {
+                        targetReached = false;
+                    }
+                
+                    if (Targets [0].type == 1)
+                    {
+                        Targets [0].Hitpoints -= damageToMage;
+                    } else if (Targets [0].type == 2)
+                    {
+                        Targets [0].Hitpoints -= damageToWarrior;
+                    } else
+                    {
+                        Targets [0].Hitpoints -= damageToTroll;
+                    }
+                
+                    if (projectile != null)
+                    {
+                        Instantiate(projectile, Targets [0].transform.position, Targets [0].transform.rotation);
+                    }
+                }
+            
+            }
+            int j=0;
+            while (Targets.Count > j)
+            {
+                if (Targets [j].Hitpoints <= 0)
+            {
+                Targets.Remove(Targets [j]);
+                countOfTargets--;
+                if (countOfTargets <= 0)
+                {
+                    hasTarget = false;
+                    targetReached = false;
+                }
+            }
+                ++j;
+            }
+            //animation for models except troll
+            if (type != 3)
+            {
+                //animation ["attack"].speed = 0.6f;        
+                animation ["attack"].speed = 0.7f;
+                animation.Play("attack");
+            }
+            
+        } else
         {
-            Targets.Remove(Targets [0]);
-            countOfTargets--;
-            if (countOfTargets <= 0)
-            {
-                hasTarget = false;
-                targetReached = false;
-            }
+            hasTarget = false;
+            targetReached = false;
+            countOfTargets = 0;
         }
 
-        //animation for models except troll
-        if (type != 3)
-        {
-            //animation ["attack"].speed = 0.6f;        
-            animation ["attack"].speed = 0.7f;
-            animation.Play("attack");
-        }
                 
     }
 
@@ -297,14 +338,15 @@ public class CharController : MonoBehaviour
                                         
                     if (hasTarget)
                     {
-                            if (SetTimeTroll && type == 3)
-                            {
-                                //animation ["attack"].speed = 0.6f;        
-                                animation.Play("attack");
-                                SetTimeTroll = false;
-                                //kad uzduodant smugi veiktu animcja anksciau
-                                nextAttackTime = Time.time + (AttackSpeed/3);
-                            }else
+                        if (SetTimeTroll && type == 3)
+                        {
+                            animation ["attack"].speed = 0.55f;        
+                            animation.Play("attack");
+                            SetTimeTroll = false;
+                            //kad uzduodant smugi veiktu animcja anksciau
+                            nextAttackTime = Time.time + (AttackSpeed / 3);
+                        } else
+
                             attack();
 
                     } else if (hasTargetCastle)

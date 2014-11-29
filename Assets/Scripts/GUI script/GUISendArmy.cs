@@ -16,7 +16,7 @@ public class GUISendArmy : MonoBehaviour {
 	public GameObject mage;
 	public GameObject troll;
 
-	public Transform object_position;
+	private Transform object_position;
 	// Use this for initialization
 	void Start () {
 		object_position = GameObject.FindGameObjectWithTag ("GoodSpawn").transform;

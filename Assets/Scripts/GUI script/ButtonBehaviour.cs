@@ -127,6 +127,7 @@ public class ButtonBehaviour : MonoBehaviour {
         string temp;
         if (buttonEnter == warrior_button)
         {
+            ChangeFontColorGui (warrior_button);
             soldierName.text = "Warrior";
             temp = "Damage:\nWarrior: " + warrior_object.GetComponent<CharController>().damageToWarrior.ToString();
             temp += "\nMage: " + warrior_object.GetComponent<CharController>().damageToMage.ToString();
@@ -138,6 +139,7 @@ public class ButtonBehaviour : MonoBehaviour {
         }
         if (buttonEnter == magic_button)
         {
+            ChangeFontColorGui (magic_button);
             soldierName.text = "Mage";
             temp = "Damage:\nWarrior: " + magic_object.GetComponent<CharController>().damageToWarrior.ToString();
             temp += "\nMage: " + magic_object.GetComponent<CharController>().damageToMage.ToString();
@@ -149,6 +151,7 @@ public class ButtonBehaviour : MonoBehaviour {
         }
         if (buttonEnter == troll_button)
         {
+            ChangeFontColorGui (troll_button);
             soldierName.text = "Troll";
             temp = "Damage:\nWarrior: " + troll_object.GetComponent<CharController>().damageToWarrior.ToString();
             temp += "\nMage: " + troll_object.GetComponent<CharController>().damageToMage.ToString();
@@ -164,6 +167,20 @@ public class ButtonBehaviour : MonoBehaviour {
     public void onMouseExit()
     {
         attributePanel.SetActive(false);
+    }
+    private void ChangeFontColorGui (Button but)
+    {
+        if (but.interactable == true)
+        {
+            soldierName.color = Color.green;
+            soldierInfoDamage.color = Color.green;
+            soldierInfoElse.color = Color.green;
+        } else
+        {
+            soldierName.color = Color.red;
+            soldierInfoDamage.color = Color.red;
+            soldierInfoElse.color = Color.red;
+        }
     }
 
 
