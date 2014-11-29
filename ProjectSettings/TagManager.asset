@@ -12,6 +12,11 @@ TagManager:
   - GoodSpell
   - 
   - EnemyCastle
+  - GoodSpawn
+  - SpawnInactive
+  - BadCastleInactive
+  - 
+  - 
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
