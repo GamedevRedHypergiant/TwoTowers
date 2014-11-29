@@ -32,7 +32,10 @@ public class CastleHealthBar : MonoBehaviour {
 	}
 
 	void drawFrame() {
-		framePosition.x = (Screen.width - framePosition.width)/2 - healthBarShift;
+		framePosition.width = 150;
+		framePosition.x = (Camera.main.WorldToScreenPoint(castle.GetComponent<CastleController> ().transform.position).x) - framePosition.width /2;
+		framePosition.y = Screen.height - (Camera.main.WorldToScreenPoint(castle.GetComponent<CastleController> ().transform.position).y);
+		framePosition.height = 10;
 		GUI.DrawTexture (framePosition, healthBarFrame);
 	}
 

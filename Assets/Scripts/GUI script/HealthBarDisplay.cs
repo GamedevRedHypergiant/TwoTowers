@@ -5,7 +5,9 @@ public class HealthBarDisplay : MonoBehaviour {
 
 	public float maxHealth;
 	public float curHealth;
-	public float scale_transform = 0.3f;
+	Rect healthBarPosition;
+
+	public Texture2D healthBar;
 	
 	public float healthBarLength;
 	
@@ -19,10 +21,18 @@ public class HealthBarDisplay : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		curHealth = gameObject.transform.parent.transform.GetComponent<CharController> ().Hitpoints;
-		transform.LookAt(transform.position + Camera.main.transform.rotation * Vector3.up,Camera.main.transform.rotation * Vector3.back);
-		Vector3 scale = transform.localScale;
-		scale.x = curHealth/maxHealth * scale_transform; // your new value
-		transform.localScale = scale;
+	}
+
+	void OnGUI() {
+		drawHealth ();
+	}
+
+	void drawHealth() {
+		healthBarPosition.x = (Camera.main.WorldToScreenPoint(this.transform.parent.GetComponent<CharController> ().transform.position).x) - healthBarLength / 2;
+		healthBarPosition.y = Screen.height - (Camera.main.WorldToScreenPoint(this.transform.parent.GetComponent<CharController> ().transform.position).y);
+		healthBarPosition.height = 8;
+		healthBarPosition.width = healthBarLength * (curHealth / maxHealth);
+		GUI.DrawTexture (healthBarPosition, healthBar);
 	}
 
 }
