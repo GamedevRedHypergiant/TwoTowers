@@ -19,11 +19,12 @@ public class GUISendArmy : MonoBehaviour {
 	public Transform object_position;
 	// Use this for initialization
 	void Start () {
-	
+		object_position = GameObject.FindGameObjectWithTag ("GoodSpawn").transform;
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		object_position = GameObject.FindGameObjectWithTag ("GoodSpawn").transform;
 		warrior_send_count_text.text = slider_warrior.value.ToString ();
 		mage_send_count_text.text = slider_mage.value.ToString ();
 		troll_send_count_text.text = slider_troll.value.ToString ();
