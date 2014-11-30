@@ -8,6 +8,7 @@ public class rotate : MonoBehaviour {
 	public float speed;
 	public bool on;
 	private float time = 0;
+    public int damage = 50;
 
 	// Use this for initialization
 	void Start () {
@@ -48,6 +49,11 @@ public class rotate : MonoBehaviour {
 	}
 	void OnTriggerEnter (Collider other) {
 		if (other.tag == "Enemy")
+<<<<<<< HEAD
 			other.GetComponent<CharController> ().Hitpoints -= 50;
+=======
+			other.GetComponent<CharController> ().Hitpoints -= damage;
+		Debug.Log (other.tag);
+>>>>>>> ea941ae03055639f3460a8cb50fd4299b82f7da3
 	}
 }
