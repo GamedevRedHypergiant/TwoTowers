@@ -11,7 +11,6 @@ public class rotate : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		//Instantiate (effect);
 		Instantiate(effect);
 		effect.enableEmission = false;
 		collider.enabled = false;
@@ -25,7 +24,6 @@ public class rotate : MonoBehaviour {
 				time += Time.deltaTime;
 				if (time >= 2) {
 					collider.enabled = false;
-					//Destroy (effect);
 					time = 0;
 					on = false;
 				}
@@ -42,7 +40,6 @@ public class rotate : MonoBehaviour {
 						effect.Play();
 						proj.enabled = false;
 						collider.enabled = true;
-						Debug.Log ("perjungiau");
 					}
 				}
 				transform.Rotate (0, 0, speed);
@@ -52,6 +49,5 @@ public class rotate : MonoBehaviour {
 	void OnTriggerEnter (Collider other) {
 		if (other.tag == "Enemy")
 			other.GetComponent<CharController> ().Hitpoints -= 50;
-		Debug.Log (other.tag);
 	}
 }
