@@ -11,3 +11,5 @@ EditorBuildSettings:
     path: Assets/map lower detail13.unity
   - enabled: 1
     path: Assets/First level.unity
+  - enabled: 1
+    path: Assets/CreditsFinal.unity

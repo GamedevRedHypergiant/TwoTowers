@@ -65766,9 +65766,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e8663f818ee6d24d94787249d35f900, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SoldiersGood: []
   troops:
   - {fileID: 100060, guid: 771dc71626e55a84fa07b64c25abbe88, type: 2}
   - {fileID: 100102, guid: ddc894edf24bade4c94b71edfa79d950, type: 2}
+  - {fileID: 100262, guid: 16765b3572558f74db615ca20ff7ec59, type: 2}
   spawnPos: {fileID: 152118955}
   troopCooldown: 5
   currentGold: 0

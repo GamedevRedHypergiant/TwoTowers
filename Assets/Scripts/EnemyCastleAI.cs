@@ -28,6 +28,8 @@ public class EnemyCastleAI : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+        nextBuy = Time.time + troopCooldown;
+        
         SoldiersGood = GameObject.FindGameObjectsWithTag("GoodGuy");
 
         for (int i=0; i<SoldiersGood.Length; ++i)
