@@ -35,11 +35,13 @@ public class GUISendArmy : MonoBehaviour {
 
 	public void sendArmy ()
 	{
-		int j = (int) slider_warrior.value;
+		float nextSpawnTime = Time.time;
+		int j = (int)slider_warrior.value;
+
 		for (int i=0; i<j; ++i)
 		{
-			GameObject.FindGameObjectWithTag ("Player").GetComponent<PlayerEntities> ().decWarriors ();
-			Instantiate (warrior, object_position.position, object_position.rotation);
+				GameObject.FindGameObjectWithTag ("Player").GetComponent<PlayerEntities> ().decWarriors ();
+				Instantiate (warrior, object_position.position, object_position.rotation);
 		}
 
 		j = (int) slider_mage.value;

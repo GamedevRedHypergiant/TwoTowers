@@ -87,7 +87,7 @@ public class CharController : MonoBehaviour
                 targetReached = true;
             }
             countOfTargets++;
-        } else if (((gameObject.tag == "GoodGuy") && (o.tag == "BadCastle")) || ((gameObject.tag == "Enemy") && (o.tag == "GoodCastle")))
+		} else if (((gameObject.tag == "GoodGuy") && (o.tag == "BadCastle")) || ((gameObject.tag == "GoodGuy") && (o.tag == "BadCastleInactive")) || ((gameObject.tag == "Enemy") && (o.tag == "GoodCastle")))
         {
             enemyCastleController = o.GetComponent<CastleController>();
             hasTargetCastle = true;
@@ -149,10 +149,18 @@ public class CharController : MonoBehaviour
                 if (Vector3.Distance(transform.position, Targets [0].transform.position) > 10f)
                 {
                     transform.Translate(Vector3.forward * Time.deltaTime * Speed);
+
+					if ((path != null ) && (Vector3.Distance(transform.position, path.vectorPath [currentWaypoint]) < 10f))
+					{
+						currentWaypoint++;
+						
+					}
                 } else
                 { 
                     targetReached = true;
                 }
+			
+
             } else
             {
                 hasTarget = false;
