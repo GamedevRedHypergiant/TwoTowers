@@ -87,7 +87,7 @@ public class CharController : MonoBehaviour
                 targetReached = true;
             }
             countOfTargets++;
-		} else if (((gameObject.tag == "GoodGuy") && (o.tag == "BadCastle")) || ((gameObject.tag == "GoodGuy") && (o.tag == "BadCastleInactive")) || ((gameObject.tag == "Enemy") && (o.tag == "GoodCastle")))
+        } else if (((gameObject.tag == "GoodGuy") && (o.tag == "BadCastle")) || ((gameObject.tag == "GoodGuy") && (o.tag == "BadCastleInactive")) || ((gameObject.tag == "Enemy") && (o.tag == "GoodCastle")))
         {
             enemyCastleController = o.GetComponent<CastleController>();
             hasTargetCastle = true;
@@ -150,16 +150,16 @@ public class CharController : MonoBehaviour
                 {
                     transform.Translate(Vector3.forward * Time.deltaTime * Speed);
 
-					if ((path != null ) && (Vector3.Distance(transform.position, path.vectorPath [currentWaypoint]) < 10f))
-					{
-						currentWaypoint++;
-						
-					}
+                    if ((path != null) && (Vector3.Distance(transform.position, path.vectorPath [currentWaypoint]) < 10f))
+                    {
+                        currentWaypoint++;
+                        
+                    }
                 } else
                 { 
                     targetReached = true;
                 }
-			
+            
 
             } else
             {
@@ -183,49 +183,83 @@ public class CharController : MonoBehaviour
 
     void attack()
     {
-        if (type == 3)
+        for (int i=0; i<Targets.Count; ++i)
         {
-            nextAttackTime = Time.time + (AttackSpeed * 2 / 3);
-            SetTimeTroll = true;
-        } else
-        {
-            nextAttackTime = Time.time + AttackSpeed;
+            if (Targets [i] == null)
+            {
+                Targets.Remove(Targets [i]);
+                if (Targets.Count == 0)
+                {
+                    hasTarget = false;
+                    targetReached = false;
+                }
+            }
         }
-       
-        if (Targets.Count > 0 && Targets [0] != null)
+
+        if (Targets.Count > 0)
         {
+
+            if (type == 3)
+            {
+                nextAttackTime = Time.time + (AttackSpeed * 2 / 3);
+                SetTimeTroll = true;
+            } else
+            {
+                nextAttackTime = Time.time + AttackSpeed;
+            }
+
             bool isBlocked = false;
             if (Random.Range(0, 99) < Targets [0].ChanceToBlock)
             {
                 isBlocked = true;
             }
-            
+                        
             if (!isBlocked)
-            {
-
-
+            {                      
                 if (type == 3)
                 {
                     int i = 0;
                     while (Targets.Count > i)
                     {
-                        if (Vector3.Distance(transform.position, Targets [i].transform.position) <= 10f)
+                        if (Targets [i] == null)
                         {
-                            targetReached = false;
-                        }
-                             
-                        if (Targets [i].type == 1)
-                        {
-                            Targets [i].Hitpoints -= damageToMage;
-                        } else if (Targets [i].type == 2)
-                        {
-                            Targets [i].Hitpoints -= damageToWarrior;
+                            Targets.Remove(Targets [i]);
+                            if (Targets.Count == 0)
+                            {
+                                hasTarget = false;
+                                targetReached = false;
+                            }
                         } else
                         {
-                            Targets [i].Hitpoints -= damageToTroll;
+                        
+                            if (Vector3.Distance(transform.position, Targets [i].transform.position) <= 10f)
+                            {
+                                targetReached = false;
+                            }
+                                         
+                            if (Targets [i].type == 1)
+                            {
+                                Targets [i].Hitpoints -= damageToMage;
+                            } else if (Targets [i].type == 2)
+                            {
+                                Targets [i].Hitpoints -= damageToWarrior;
+                            } else
+                            {
+                                Targets [i].Hitpoints -= damageToTroll;
+                            }
+
+                            if (Targets [i].Hitpoints <= 0)
+                            {
+                                Targets.Remove(Targets [i]);
+                                --i;
+                                if (Targets.Count == 0)
+                                {
+                                    hasTarget = false;
+                                    targetReached = false;
+                                }
+                            }
+                            ++i;    
                         }
-                        ++i;
-                
                     }
                 } else
                 {
@@ -233,7 +267,7 @@ public class CharController : MonoBehaviour
                     {
                         targetReached = false;
                     }
-                
+                    
                     if (Targets [0].type == 1)
                     {
                         Targets [0].Hitpoints -= damageToMage;
@@ -244,45 +278,26 @@ public class CharController : MonoBehaviour
                     {
                         Targets [0].Hitpoints -= damageToTroll;
                     }
-                
+                    
                     if (projectile != null)
                     {
                         Instantiate(projectile, Targets [0].transform.position, Targets [0].transform.rotation);
                     }
+                    
+                    if (Targets [0].Hitpoints <= 0)
+                    {
+                        Targets.Remove(Targets [0]);
+                        if (Targets.Count == 0)
+                        {
+                            hasTarget = false;
+                            targetReached = false;
+                        }
+                    }            
+                    animation ["attack"].speed = 0.7f;
+                    animation.Play("attack");
                 }
-            
-            }
-            int j=0;
-            while (Targets.Count > j)
-            {
-                if (Targets [j].Hitpoints <= 0)
-            {
-                Targets.Remove(Targets [j]);
-                countOfTargets--;
-                if (countOfTargets <= 0)
-                {
-                    hasTarget = false;
-                    targetReached = false;
-                }
-            }
-                ++j;
-            }
-            //animation for models except troll
-            if (type != 3)
-            {
-                //animation ["attack"].speed = 0.6f;        
-                animation ["attack"].speed = 0.7f;
-                animation.Play("attack");
-            }
-            
-        } else
-        {
-            hasTarget = false;
-            targetReached = false;
-            countOfTargets = 0;
-        }
-
-                
+            }          
+        }               
     }
 
     void attackCastle()
