@@ -9916,6 +9916,7 @@ MonoBehaviour:
   proj: {fileID: 623108035}
   speed: .100000001
   on: 0
+  damage: 50
 --- !u!119 &623108035
 Projector:
   m_ObjectHideFlags: 0
