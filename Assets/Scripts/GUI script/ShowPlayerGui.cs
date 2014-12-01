@@ -9,11 +9,6 @@ public class ShowPlayerGui : MonoBehaviour {
 	void OnMouseDown() {
 		playerGUI.SetActive (true);
 	}
-
-	// Use this for initialization
-	void Start () {
-		playerGUI.SetActive (false);
-	}
 	
 	// Update is called once per frame
 	void Update () {
