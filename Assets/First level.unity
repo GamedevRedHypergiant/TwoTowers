@@ -8791,7 +8791,7 @@ RectTransform:
   - {fileID: 1359336633}
   - {fileID: 114348930}
   m_Father: {fileID: 767191227}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_AnchorMin: {x: .5, y: 1}
   m_AnchorMax: {x: .5, y: 1}
   m_AnchoredPosition: {x: 0, y: -18.5900002}
@@ -11230,12 +11230,12 @@ RectTransform:
   m_Children:
   - {fileID: 1465226348}
   - {fileID: 2005021635}
-  m_Father: {fileID: 920309792}
-  m_RootOrder: 6
-  m_AnchorMin: {x: .5, y: .5}
-  m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -668.099976, y: 284.919983}
-  m_SizeDelta: {x: 82.6999969, y: 30.6499996}
+  m_Father: {fileID: 767191227}
+  m_RootOrder: 0
+  m_AnchorMin: {x: .5, y: 1}
+  m_AnchorMax: {x: .5, y: 1}
+  m_AnchoredPosition: {x: -50.0400009, y: -18.6700001}
+  m_SizeDelta: {x: 82.6999969, y: 30.6499939}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &333109209
 MonoBehaviour:
@@ -26029,6 +26029,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
+  - {fileID: 333109208}
   - {fileID: 259197359}
   - {fileID: 920309792}
   - {fileID: 2084575161}
@@ -29027,9 +29028,8 @@ RectTransform:
   - {fileID: 182539369}
   - {fileID: 1119083083}
   - {fileID: 466835276}
-  - {fileID: 333109208}
   m_Father: {fileID: 767191227}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_AnchorMin: {x: 1, y: .5}
   m_AnchorMax: {x: 1, y: .5}
   m_AnchoredPosition: {x: -80.6999969, y: -3.35132408}
@@ -44758,7 +44758,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22400000, guid: 071cc689daed2824ca075f6301d4a621, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22400000, guid: 071cc689daed2824ca075f6301d4a621, type: 2}
       propertyPath: m_AnchoredPosition.x
@@ -61786,7 +61786,7 @@ RectTransform:
   - {fileID: 623335704}
   - {fileID: 1525409461}
   m_Father: {fileID: 767191227}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_AnchorMin: {x: .5, y: 0}
   m_AnchorMax: {x: .5, y: 0}
   m_AnchoredPosition: {x: 61.0999985, y: 45.4399986}
