@@ -28,7 +28,7 @@ public class CastleController : MonoBehaviour {
 
 	float nextGoldGenerateTime;
 	float waitTimeToGenerate = 5f;
-	float goldGiven = 5f;
+	public float goldGiven = 5f;
 
 	Vector3 aimPoint;
 
@@ -118,12 +118,13 @@ public class CastleController : MonoBehaviour {
         if (gold >= upgrade_cost)
         {
 
-            gold -= upgrade_cost;
+            gold -= start_upgrade_cost;
             max_warriors += upgrade_warriors;
             max_mages += upgrade_mages;
             max_trolls += upgrade_trolls;
             Hitpoints += upgrade_health;
             start_upgrade_cost += upgrade_cost;
+            goldGiven+=goldGiven;
         }
     }
 }

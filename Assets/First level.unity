@@ -9212,12 +9212,12 @@ MonoBehaviour:
   upgrade_mages: 2
   upgrade_trolls: 1
   upgrade_health: 100
-  upgrade_cost: 100
+  upgrade_cost: 300
   start_upgrade_cost: 100
   max_warriors: 2
   max_mages: 0
   max_trolls: 0
-  gold: 1000
+  gold: 400
   Hitpoints: 1000
   reloadTime: 5
   projectile: {fileID: 100004, guid: 61cf2b3210c7cdd49b0cb5e329e2832b, type: 2}
@@ -9225,6 +9225,7 @@ MonoBehaviour:
   - {fileID: 1179992107}
   - {fileID: 1074042930}
   target: {fileID: 0}
+  goldGiven: 5
 --- !u!54 &265028428
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -61660,6 +61661,7 @@ MonoBehaviour:
   - {fileID: 1938539538}
   - {fileID: 1723059347}
   target: {fileID: 0}
+  goldGiven: 5
 --- !u!65 &2081825745
 BoxCollider:
   m_ObjectHideFlags: 0

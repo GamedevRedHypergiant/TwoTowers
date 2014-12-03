@@ -21,7 +21,7 @@ public class UpgradeButtonBehaviour : MonoBehaviour
     void Update()
     {
         if (GameObject.FindGameObjectWithTag("GoodCastle").GetComponent<CastleController>().gold
-            >= GameObject.FindGameObjectWithTag("GoodCastle").GetComponent<CastleController>().upgrade_cost)
+            >= GameObject.FindGameObjectWithTag("GoodCastle").GetComponent<CastleController>().start_upgrade_cost)
         {
             upgradeButton.interactable = true;
         } else
@@ -56,8 +56,10 @@ public class UpgradeButtonBehaviour : MonoBehaviour
                                   + GameObject.FindGameObjectWithTag("GoodCastle").GetComponent<CastleController>().upgrade_trolls).ToString();
         soldierInfoDamage.text = temp;
         temp = "Life now: " + GameObject.FindGameObjectWithTag("GoodCastle").GetComponent<CastleController>().Hitpoints.ToString();
-        temp += "\nAfter Upgrade: " + (GameObject.FindGameObjectWithTag("GoodCastle").GetComponent<CastleController>().Hitpoints
+        temp += "\nLife +: " + (GameObject.FindGameObjectWithTag("GoodCastle").GetComponent<CastleController>().Hitpoints
                                     + GameObject.FindGameObjectWithTag("GoodCastle").GetComponent<CastleController>().upgrade_health);
+        temp += "\nGold gen. +: " + (GameObject.FindGameObjectWithTag("GoodCastle").GetComponent<CastleController>().goldGiven
+                                     + GameObject.FindGameObjectWithTag("GoodCastle").GetComponent<CastleController>().goldGiven);
         soldierInfoElse.text = temp;
   
         attributePanel.SetActive(true);
