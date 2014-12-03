@@ -61652,7 +61652,7 @@ MonoBehaviour:
   max_warriors: 0
   max_mages: 0
   max_trolls: 0
-  gold: 1000
+  gold: 100
   Hitpoints: 1000
   reloadTime: 5
   projectile: {fileID: 100004, guid: 169ff3a54ff012347adcd9dd13d095c8, type: 2}

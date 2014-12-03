@@ -42,14 +42,14 @@ public class EnemyCastleAI : MonoBehaviour
 
             if (MageCount <= 2 && MageCount > 0 && !Sent)
             {
-                for (int i=0; i<2; ++i)
-                {
-                    if (transform.GetComponent<CastleController>().gold >= troops [0].GetComponent<CharController>().price)
-                    {
-                        Instantiate(troops [0], spawnPos.position, spawnPos.rotation);
-                        transform.GetComponent<CastleController>().gold -= troops [0].GetComponent<CharController>().price;
-                    }
-                }  
+//                for (int i=0; i<2; ++i)
+//                {
+//                    if (transform.GetComponent<CastleController>().gold >= troops [0].GetComponent<CharController>().price)
+//                    {
+//                        Instantiate(troops [0], spawnPos.position, spawnPos.rotation);
+//                        transform.GetComponent<CastleController>().gold -= troops [0].GetComponent<CharController>().price;
+//                    }
+//                }  
                 if (transform.GetComponent<CastleController>().gold >= troops [1].GetComponent<CharController>().price)
                 {
                     Instantiate(troops [1], spawnPos.position, spawnPos.rotation);
@@ -58,7 +58,7 @@ public class EnemyCastleAI : MonoBehaviour
                 Sent = true;
             }
 
-            if (GuyCount > 0 && GuyCount < 4 && MageCountAI == 0 && GuyCountAI == 0 && TrollCountAI == 0 && !Sent)
+            if (GuyCount > 0 && GuyCount < 3 && MageCountAI == 0 && GuyCountAI == 0 && TrollCountAI == 0 && !Sent)
             {
                 for (int i=0; i<2; ++i)
                 {
@@ -100,10 +100,10 @@ public class EnemyCastleAI : MonoBehaviour
                     }
                 }  
 
-                if (transform.GetComponent<CastleController>().gold >= troops [0].GetComponent<CharController>().price)
+                if (transform.GetComponent<CastleController>().gold >= troops [2].GetComponent<CharController>().price)
                 {
-                    Instantiate(troops [0], spawnPos.position, spawnPos.rotation);
-                    transform.GetComponent<CastleController>().gold -= troops [0].GetComponent<CharController>().price;
+                    Instantiate(troops [2], spawnPos.position, spawnPos.rotation);
+                    transform.GetComponent<CastleController>().gold -= troops [2].GetComponent<CharController>().price;
                 }
                 Sent = true;
             }
@@ -126,14 +126,7 @@ public class EnemyCastleAI : MonoBehaviour
             }
             if (MageCount > 2 && MageCountAI == 0 && TrollCountAI == 0 && !Sent)
             {
-                for (int i=0; i<MageCount; ++i)
-                {
-                    if (transform.GetComponent<CastleController>().gold >= troops [0].GetComponent<CharController>().price)
-                    {
-                        Instantiate(troops [0], spawnPos.position, spawnPos.rotation);
-                        transform.GetComponent<CastleController>().gold -= troops [0].GetComponent<CharController>().price;
-                    }
-                }
+               
                 for (int i=0; i<Mathf.FloorToInt((MageCount/3)); ++i)
                 {
                     if (transform.GetComponent<CastleController>().gold >= troops [2].GetComponent<CharController>().price)
@@ -142,21 +135,30 @@ public class EnemyCastleAI : MonoBehaviour
                         transform.GetComponent<CastleController>().gold -= troops [2].GetComponent<CharController>().price;
                     }
                 }
-                Sent = true;
-            }
 
-            if (MageCount < 2 && MageCount > 2 && MageCountAI == 0 && TrollCountAI == 0 && !Sent)
-            {
                 for (int i=0; i<MageCount; ++i)
                 {
-                    if (transform.GetComponent<CastleController>().gold >= troops [1].GetComponent<CharController>().price)
+                    if (transform.GetComponent<CastleController>().gold >= troops [0].GetComponent<CharController>().price)
                     {
-                        Instantiate(troops [1], spawnPos.position, spawnPos.rotation);
-                        transform.GetComponent<CastleController>().gold -= troops [1].GetComponent<CharController>().price;
+                        Instantiate(troops [0], spawnPos.position, spawnPos.rotation);
+                        transform.GetComponent<CastleController>().gold -= troops [0].GetComponent<CharController>().price;
                     }
                 }
                 Sent = true;
             }
+
+//            if (MageCount < 2 && MageCount > 0 && MageCountAI == 0 && TrollCountAI == 0 && !Sent)
+//            {
+//                for (int i=0; i<MageCount; ++i)
+//                {
+//                    if (transform.GetComponent<CastleController>().gold >= troops [1].GetComponent<CharController>().price)
+//                    {
+//                        Instantiate(troops [1], spawnPos.position, spawnPos.rotation);
+//                        transform.GetComponent<CastleController>().gold -= troops [1].GetComponent<CharController>().price;
+//                    }
+//                }
+//                Sent = true;
+//            }
 
             if (MageCountAI == 0 && GuyCountAI == 0 && TrollCountAI == 0 && !Sent)
             {              

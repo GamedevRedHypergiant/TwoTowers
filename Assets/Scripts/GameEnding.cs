@@ -43,9 +43,9 @@ public class GameEnding : MonoBehaviour {
 		} else if (badHealth <= 0) {
 								GUI.Box (statePos, "Victory");
 								Time.timeScale = 0;
-								if (GUI.Button (buttonPos, "Restart")) {
+								if (GUI.Button (buttonPos, "NextLevel")) {
 									Time.timeScale = 1;
-									Application.LoadLevel (Application.loadedLevel);
+									Application.LoadLevel (3);
 								}
 						}
 	}
